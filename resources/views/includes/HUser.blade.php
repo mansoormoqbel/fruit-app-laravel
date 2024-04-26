@@ -38,18 +38,18 @@
                                             <li><a href="{{Route('about')}}">About</a></li>
                                             <li><a href="{{Route('Cart')}}">Cart</a></li>
                                             <li><a href="{{Route('Checkout')}}">Check Out</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="{{Route('contact')}}">Contact</a></li>
                                             <li><a href="news.html">News</a></li>
                                             <li><a href="{{Route('shop')}}">Shop</a></li>
                                         </ul>
                                     </li>
-                                    <li @if(request()->has('home')) class="current-list-item" @endif><a href="news.html">News</a>
+                                   {{--  <li @if(request()->has('home')) class="current-list-item" @endif><a href="news.html">News</a>
                                         <ul class="sub-menu">
                                             <li><a href="news.html">News</a></li>
                                             <li><a href="single-news.html">Single News</a></li>
                                         </ul>
-                                    </li>
-                                    <li @if(request()->has('home')) class="current-list-item" @endif><a href="contact.html">Contact</a></li>
+                                    </li> --}}
+                                    <li @if(request()->has('home')) class="current-list-item" @endif><a href="{{Route('contact')}}">Contact</a></li>
                                     <li @if(request()->has('shop')) class="current-list-item" @endif><a href="{{Route('shop')}}">Shop</a>
                                         <ul class="sub-menu">
                                             <li><a href="shop.html">Shop</a></li>

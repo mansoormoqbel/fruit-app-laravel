@@ -12,9 +12,9 @@
                     <div class="footer-box get-in-touch">
                         <h2 class="widget-title">Get in Touch</h2>
                         <ul>
-                            <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
+                            <li>34/8, Jordan, Amman, swefeh.</li>
                             <li>support@fruitkha.com</li>
-                            <li>+00 111 222 3333</li>
+                            <li>+962 788 3212 452</li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <p>Copyrights &copy; 2019 - <a href="https://imransdesign.com/">Imran Hossain</a>,  All Rights Reserved.</p>
+                    <p>Copyrights &copy; 2019 - <a href="https://mansoormoqbel.com/">mansoor</a>,  All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 text-right col-md-12">
                     <div class="social-icons">

@@ -30,5 +30,6 @@ Auth::routes();
     Route::get('/Checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('Checkout')->middleware('auth');
     Route::post('/OrderPlace', [App\Http\Controllers\CheckoutController::class, 'create'])->name('OrderPlace')->middleware('auth');
     Route::get('/test', [App\Http\Controllers\CheckoutController::class, 'placeOrder'])->name('test')->middleware('auth');
+    Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact')->middleware('auth');
 
     
