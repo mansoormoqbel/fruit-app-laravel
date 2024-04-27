@@ -59,9 +59,7 @@
                                
 								<input type="text" placeholder="Subject" name="subject" id="subject"{{--  class="@error('subject') is-invalid @enderror" --}}>
  
-                                {{-- @error('subject')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror --}}
+                                
 							</p>
 							<p>
                                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" {{-- class="@error('message') is-invalid @enderror" --}}></textarea>
