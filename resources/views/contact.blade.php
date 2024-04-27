@@ -23,22 +23,54 @@
 				<div class="col-lg-8 mb-5 mb-lg-0">
 					<div class="form-title">
 						<h2>Have you any question?</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p>
+						<p>The customer is very important, the customer will be followed by the customer. Let's be fair! It is difficult to assume. Tolerating, in which he seeks something else. The body itself with less pleasure? Pain, to be born!</p>
 					</div>
-				 	<div id="form_status"></div>
+                    @if (session('success'))
+                        <div class="alert alert-success">
+                            {{session('success') }}
+                        </div>
+
+                    @endif
+                    <div id="form_status">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                    </div>
 					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
-							<p>
-								<input type="text" placeholder="Name" name="name" id="name">
-								<input type="email" placeholder="Email" name="email" id="email">
+						<form action="{{Route('CreateContact')}}" method="POST"  id="fruitkha-contact" onSubmit="return valid_datas( this );">
+							@csrf
+                            <p>
+                                
+								<input type="text" placeholder="Name" name="name" id="name" value="{{$user ->name}}">
+ 
+                              
+								<input type="email" placeholder="Email" name="email" id="email" value="{{$user ->email}}">
+ 
 							</p>
 							<p>
-								<input type="tel" placeholder="Phone" name="phone" id="phone">
-								<input type="text" placeholder="Subject" name="subject" id="subject">
+								<input type="tel" placeholder="Phone" name="phone" id="phone" value="{{$user ->phone_number}}">
+ 
+                               
+								<input type="text" placeholder="Subject" name="subject" id="subject"{{--  class="@error('subject') is-invalid @enderror" --}}>
+ 
+                                {{-- @error('subject')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror --}}
 							</p>
-							<p><textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea></p>
-							<input type="hidden" name="token" value="FsWga4&@f6aw" />
-							<p><input type="submit" value="Submit"></p>
+							<p>
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" {{-- class="@error('message') is-invalid @enderror" --}}></textarea>
+                               {{--  @error('message')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror --}}
+                            </p>
+							
+							<p>{{-- <input type="submit" value="Submit"> --}}<button type="submit">Submit</button></p>
 						</form>
 					</div>
 				</div>
@@ -46,7 +78,8 @@
 					<div class="contact-form-wrap">
 						<div class="contact-form-box">
 							<h4><i class="fas fa-map"></i> Shop Address</h4>
-							<p>34/8, East Hukupara <br> Gifirtok, Sadan. <br> Country Name</p>
+                             
+							<p>34/8, Jordan, <br> Amman, swefeh. <br> Country Name</p>
 						</div>
 						<div class="contact-form-box">
 							<h4><i class="far fa-clock"></i> Shop Hours</h4>
@@ -54,7 +87,7 @@
 						</div>
 						<div class="contact-form-box">
 							<h4><i class="fas fa-address-book"></i> Contact</h4>
-							<p>Phone: +00 111 222 3333 <br> Email: support@fruitkha.com</p>
+							<p>Phone: +962 788 3212 452 <br> Email: support@fruitkha.com</p>
 						</div>
 					</div>
 				</div>
